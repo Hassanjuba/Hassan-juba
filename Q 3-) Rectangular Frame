@@ -1,0 +1,23 @@
+def rectangular_fram(str): words = str line = ''
+
+longest = len(words[0])
+for i in range(1, len(words)):
+    if len(words[i]) >= longest:
+        longest = len(words[i])
+
+for x in range(longest + 5):
+    line += '*'
+
+print(line)
+
+for x in words:
+    space = longest - len(x)
+    print('*', x, ' ' * space, '*')
+
+print(line)
+framethis = input('Please Enter The Sentence : ') box = '' words = []
+
+for x in framethis: if x == ' ': words.append(box) box = '' else: box += x words.append(box)
+
+rectangular_fram(words)
+
