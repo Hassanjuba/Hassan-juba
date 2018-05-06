@@ -1,0 +1,14 @@
+def isPalindrome(num):
+    return str(num) == str(num)[::-1]
+def largest_num(bot, top):
+    z = 0
+    for x in range(top, bot, -1):
+        for y in range(top,bot, -1):
+            if isPalindrome(x*y):
+                if x*y > z:
+                    z = x*y
+    return z
+
+x=largest_num(100,999)
+print(x)
+
